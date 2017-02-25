@@ -22,8 +22,14 @@ class MVVMTestTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let todayDate = Date()
+        let dummyPerson = Person(firstName: "Soan", lastName: "Saini", birthDate: todayDate, salutation: "Mr")
+        XCTAssertEqual(dummyPerson.lastName,"Saini")
+        
+        let dummyModel = FirstViewModel(person: dummyPerson)
+        XCTAssertEqual(dummyModel.name,"Mr Soan Saini")
+        
+        XCTAssertEqual(dummyModel.dateOfBirth,todayDate.firstViewDate())
     }
     
     func testPerformanceExample() {

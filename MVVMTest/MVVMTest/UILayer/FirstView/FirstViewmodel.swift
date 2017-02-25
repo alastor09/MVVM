@@ -8,7 +8,7 @@
 
 import Foundation
 
-class firstViewModel {
+class FirstViewModel {
     var person: Person
     var name: String
     var dateOfBirth: String
